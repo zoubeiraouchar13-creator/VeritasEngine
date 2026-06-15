@@ -19,35 +19,35 @@ Le système repose sur trois couches complémentaires :
 
 ---
 
-## Architecture
-Entrée utilisateur (texte / image)
-|
-+---> Bi-LSTM (score suspicion textuelle)
-|
-+---> CNN ResNet-18 (score anomalie image)
-|
-v
+## Architecture  
+Entrée utilisateur (texte / image)  
+|  
++---> Bi-LSTM (score suspicion textuelle)  
+|  
++---> CNN ResNet-18 (score anomalie image)  
+|  
+v  
 Orchestrateur LangChain (VeritasEngineOrchestrator)
-|
-+---> Agent DuckDuckGo  (actualités récentes)
-|
-+---> Agent Wikipedia   (contexte historique)
-|
-v
-LLM Llama 3.2 via Ollama (rapport d'audit)
-|
-v
-Dashboard Streamlit (scores + verdict + explication)
+|  
++---> Agent DuckDuckGo  (actualités récentes)  
+|  
++---> Agent Wikipedia   (contexte historique)  
+|  
+v  
+LLM Llama 3.2 via Ollama (rapport d'audit)  
+|  
+v  
+Dashboard Streamlit (scores + verdict + explication)  
 ---
 
-## Structure du projet
-.
-├── app.py                # Interface Streamlit et gestion du pipeline
-├── agents_lc.py          # Orchestrateur LangChain et agents multi-tâches
-├── models_dl.py          # Architectures PyTorch (Bi-LSTM, CNN) et inférences
-├── fact_checker_kb.py    # Modules de recherche DuckDuckGo et Wikipedia
-├── .env                  # Variables d'environnement (non versionné)
-└── data/                 # Dossier temporaire pour les images uploadées
+## Structure du projet  
+.  
+├── app.py                # Interface Streamlit et gestion du pipeline  
+├── agents_lc.py          # Orchestrateur LangChain et agents multi-tâches  
+├── models_dl.py          # Architectures PyTorch (Bi-LSTM, CNN) et inférences  
+├── fact_checker_kb.py    # Modules de recherche DuckDuckGo et Wikipedia  
+├── .env                  # Variables d'environnement (non versionné)  
+└── data/                 # Dossier temporaire pour les images uploadées  
 ---
 
 ## Prérequis
