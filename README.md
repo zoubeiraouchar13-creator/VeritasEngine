@@ -19,7 +19,8 @@ Le système repose sur trois couches complémentaires :
 
 ---
 
-## Architecture  
+## Architecture:  
+
 Entrée utilisateur (texte / image)  
 |  
 +---> Bi-LSTM (score suspicion textuelle)  
@@ -41,6 +42,7 @@ Dashboard Streamlit (scores + verdict + explication)
 ---
 
 ## Structure du projet  
+
 .  
 ├── app.py                # Interface Streamlit et gestion du pipeline  
 ├── agents_lc.py          # Orchestrateur LangChain et agents multi-tâches  
