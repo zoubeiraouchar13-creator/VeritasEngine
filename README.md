@@ -88,7 +88,9 @@ pip install -r requirements.txt
 ## Configuration
 
 Créer un fichier `.env` à la racine du projet :
+```bach
 WIKIPEDIA_USER_AGENT=VeritasEngine/1.0 (votre-email@exemple.com)
+```
 ---
 
 ## Lancement
